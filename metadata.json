@@ -1,0 +1,7 @@
+{
+  "name": "护心管家 (HeartGuard)",
+  "description": "专为心脏支架术后康复设计的健康管理应用，包含用药提醒、饮食建议、运动打卡及AI健康助手。",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
