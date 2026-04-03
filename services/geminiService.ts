@@ -2,7 +2,7 @@ import { GoogleGenAI, Modality } from "@google/genai";
 
 // Initialize the client
 // NOTE: In a real production app, handle API keys more securely.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 const SYSTEM_INSTRUCTION = `
 你是一位专业的、富有同情心的心血管健康助手，专门协助一位刚做完心脏支架手术且有全身血管堵塞情况的老年患者。
@@ -21,7 +21,7 @@ const SYSTEM_INSTRUCTION = `
 
 export const generateHealthAdvice = async (userPrompt: string, contextData?: string): Promise<string> => {
   try {
-    const modelId = 'gemini-2.5-flash';
+    const modelId = 'gemini-3-flash-preview';
     
     let fullPrompt = userPrompt;
     if (contextData) {
